@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PSY555 Experiment</title>
+    <link rel ="stylesheet" href="styling.css">
+    <script src ="snake.js" defer> </script>
+</head>
+<body>
+
+<!--TODO: make board fill up screen - DONE ISH? idk-->
+<!--TODO: make the grid for targets to go in - DONE -->
+<!--TODO: figure out how to open part of the board when collecting a target-->
+<!--TODO: tutorial form-->
+
+<div id = "startButton">
+    <h1 id = "startText">Snake :)</h1>
+    <button onclick = "loadGame()">Start</button>
+</div>
+
+<div class = "experiment">
+    <div class = "experiment-layout">
+
+        <div class = "collected-targets">
+            <h1 id = "trial">trial: 1</h1>
+        </div>
+
+        <div class = "experiment-display">
+            <div class = "experiment-border">
+                <div class = "experiment-board-left" id = "gameBoard">
+
+                </div>
+
+            </div>
+            <div class = "experiment-border">
+                <div class = "experiment-board-right">
+
+                </div>
+            </div>
+        </div>
+
+        <div class = "player-text">
+            <p id = "player">YOU</p>
+            <p id = "opponent">OPPONENT</p>
+        </div>
+        <div id = "border1Button">
+            <button onclick = "changeRoomType('1')">Change to Combined</button>
+        </div>
+
+        <div id = "border2Button">
+            <button onclick = "changeRoomType('2')">Change to Seperated</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/*IF YOU WANT TO EXPERIMENT WITH THE SIZE OF THE CELLS HERE, CHANGE THESE VALUES ONLY.*/
+:root {
+    --columns: 20;
+    --rows: 20;
+    --sizeOfCells: 20px;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/*Everything on the Page*/
+.experiment {
+    display: none
+}
+
+/*The same as .experiment but not hidden*/
+.experiment-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Text at the top of the screen*/
+.collected-targets {
+
+}
+
+/*The grids container*/
+.experiment-display {
+    height:100%;
+    width:100%;
+    left: 0px;
+    top: 0px;
+    border: 2px solid;
+    border-image: linear-gradient(to right, blue 50%, red 50%) 1;
+    display: flex;
+}
+
+/*An individual grid instance*/
+.experiment-border {
+    display:flex;
+    flex-direction: column;
+
+}
+
+.experiment-border p {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/*Both grids*/
+.experiment-board-left, .experiment-board-right {
+    display: grid;
+    /*grid (quantity, size) */
+
+    grid-template-columns: repeat(var(--columns), var(--sizeOfCells));
+    grid-template-rows: repeat(var(--rows), var(--sizeOfCells));
+
+}
+
+/*PLAYER SIDE*/
+.experiment-board-left {
+    border: 1px solid blue;
+    /*border-right: none;*/
+}
+
+
+/*CPU SIDE*/
+.experiment-board-right {
+    border: 1px solid red;
+    /*border-left:none;*/
+}
+
+.player-text{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+#border1Button {
+    display: block;
+}
+
+#border2Button {
+    display: none;
+}
+
+.player {
+    background-color:red;
+}
+
+.target {
+    background-color:black;
+}
